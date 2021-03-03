@@ -3,8 +3,6 @@ import Axios from "axios";
 import './App.css';
 
 function App() {
-
-  const [days, setDays] =useState(0);
   /*
    foodName:{
         type: String,
@@ -25,9 +23,8 @@ function App() {
   });
   }, []);
 
-
-  
   return (
+    
     <div className="App">
       <h1> DISPLAY MONGO DATA</h1>
 
@@ -35,13 +32,16 @@ function App() {
         return ( 
           <div key={key}> 
           <h1>ID: {val.id}</h1> 
-          <h3>Name: {val.name}</h3>
+          <h3>Name of Dish: {val.name}</h3>
+          <h4>Webpage With Recipe: {val.sourceWebPage}</h4>
           <p>Calorie Count: {val.calories}</p>
           <p>Health Labels: {val.healthLabels}</p>
-          <p>Time to cook: {val.totaltime}</p>
-          <a href = {val.recipeURL}>
-          <img src = {val.imageURL}/>
-
+          <p>Time to cook: {val.totalTime}</p>
+          
+          {/* href dont work when set to a variable
+              Need to figure a way around it*/}
+          <a href= {val.recipeURL}> 
+          <img src = {val.imageURL} alt = "food item"/> 
           </a>
           
           </div>

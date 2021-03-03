@@ -17,13 +17,13 @@ const FoodSchema = new mongoose.Schema({
         type: String,
         required:false
     },
-    totaltime:{
+    totalTime:{
         type: Number,
         required:false
     },
     recipeURL:{
-        type: Number,
-        required:false
+        type: String,
+        required:true
     },
     calories:{
         type: Number,
@@ -38,7 +38,7 @@ const FoodSchema = new mongoose.Schema({
         required:false
     },
     ingredients:{
-        type: Array,
+        type: Object,
         required:false
     },
 });
