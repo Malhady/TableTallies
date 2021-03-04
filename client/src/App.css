@@ -7,11 +7,12 @@
 
 }
 
-input, button{
-  width: 200px;
-  height: 30px;
-  font-size: 20px;
-  margin: 5px;
+body {
+  background-color: #daf8df;
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  font-family: Arial;
+  text-align: center;
 }
 
 

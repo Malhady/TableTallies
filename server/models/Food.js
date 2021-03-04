@@ -1,3 +1,8 @@
+/*
+    This class is how we pull in the mongoDB data
+    and the way it is read from the server. This outlines
+    how the data comes in
+*/
 const mongoose = require('mongoose');
 
 const FoodSchema = new mongoose.Schema({
@@ -38,7 +43,7 @@ const FoodSchema = new mongoose.Schema({
         required:false
     },
     ingredients:{
-        type: Object,
+        type: Array,
         required:false
     },
 });
