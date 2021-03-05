@@ -7,6 +7,7 @@
 
 
 .recipes{
+  align-content: flex-end;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
