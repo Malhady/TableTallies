@@ -46,6 +46,7 @@ function App() {
         calories={val.calories}
         image={val.imageURL}
         ingredients={val.ingredients}
+        recipeURL={val.recipeURL}
         />
       )
 
