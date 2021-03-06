@@ -11,7 +11,7 @@ app.use(cors());
 //Connects to the actualy MongoDB server
 //user acocunt is 'user' 'pass' and the db is 'food'
 mongoose.connect(
-    'mongodb+srv://user:pass@crud.qxdlp.mongodb.net/food?retryWrites=true&w=majority', 
+    'mongodb+srv://user:Password1@crud.qxdlp.mongodb.net/food?retryWrites=true&w=majority', 
     {
     useNewURLParser: true,
     }
