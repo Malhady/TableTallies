@@ -41,4 +41,5 @@ jspm_packages
 public/
 
 # dotenv environment variables file
+server/.env
 .env
