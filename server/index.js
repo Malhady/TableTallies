@@ -14,7 +14,7 @@ app.use(cors());
 const mongoUsername = process.env.REACT_APP_DB_USERNAME;
 const mongoPassword = process.env.REACT_APP_DB_PASSWORD;
 const mongoDBName = process.env.REACT_APP_DB_NAME;
-console.log(process.env.REACT_APP_DB_NAME);
+
 mongoose.connect(
     `mongodb+srv://${mongoUsername}:${mongoPassword}@crud.qxdlp.mongodb.net/${mongoDBName}?retryWrites=true&w=majority`, 
     {
@@ -58,7 +58,7 @@ app.get("/read", async (req, res) => {
         res.send(result);
     });  
 });
-const PORT = process.env.REACT_APP_PORTNUM;
+const PORT = process.env.REACT_APP_PORT_NUM;
 app.listen(PORT, () =>{
     console.log("Server is running on port 3001...")
 });
