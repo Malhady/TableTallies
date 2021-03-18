@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import './App.css';
 import Recipe from './Recipe';
+import Sidebar from './Components/Sidebar';
 
 
 /*To run the application:
@@ -38,6 +39,7 @@ function App() {
       displays every single variable we call
       */
     }
+      <Sidebar/>
       <div className = "recipes">
       {foodList.map((val, key) => (
         <Recipe

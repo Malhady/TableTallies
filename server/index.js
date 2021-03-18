@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -10,8 +11,12 @@ app.use(cors());
 
 //Connects to the actualy MongoDB server
 //user acocunt is 'user' 'pass' and the db is 'food'
+const mongoUsername = process.env.REACT_APP_DB_USERNAME;
+const mongoPassword = process.env.REACT_APP_DB_PASSWORD;
+const mongoDBName = process.env.REACT_APP_DB_NAME;
+
 mongoose.connect(
-    'mongodb+srv://user:Password1@crud.qxdlp.mongodb.net/food?retryWrites=true&w=majority', 
+    `mongodb+srv://${mongoUsername}:${mongoPassword}@crud.qxdlp.mongodb.net/${mongoDBName}?retryWrites=true&w=majority`, 
     {
     useNewURLParser: true,
     }
@@ -53,8 +58,8 @@ app.get("/read", async (req, res) => {
         res.send(result);
     });  
 });
-
-app.listen(3001, () =>{
+const PORT = process.env.REACT_APP_PORT_NUM;
+app.listen(PORT, () =>{
     console.log("Server is running on port 3001...")
 });
 
