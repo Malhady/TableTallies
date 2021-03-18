@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import {Button} from 'react-bootstrap';
 import './Sidebar.css';
-import {Filter} from '../../../server/index';
+
+
 
 const Sidebar = () =>(
     <div className="Sidebar">
-        <Button className = "Sidebar_content" variant="contained" color="primary" onClick={Filter(Pizza)}> 
+        <Button className = "Sidebar_content" variant="contained" color="primary"> 
             Pizza 
         </Button>
         <Button className = "Sidebar_content" variant="contained" color="primary"> 

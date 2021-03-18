@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import './App.css';
-import Recipe from './Recipe';
+import Recipe from './Components/Recipe';
 import Sidebar from './Components/Sidebar';
+import Recipes from './Components/Recipes'
 
 
 /*To run the application:
@@ -18,17 +19,6 @@ import Sidebar from './Components/Sidebar';
 */
 
 function App() {
-  //iniates the foodlist that we will use down below to get the data from localhost:3001/read
-  const [foodList, setFoodList] = useState([]);
-
-  //Uses Axios to read the data from the server file located at 3001/read
-  //and then sets the foodlist equal to that data
-  useEffect(() =>{
-    Axios.get('http://localhost:3001/read').then((response) => {
-      setFoodList(response.data);
-  });
-  }, []);
-
   return (
 
     //This is what shows up on the react client page
@@ -40,20 +30,7 @@ function App() {
       */
     }
       <Sidebar/>
-      <div className = "recipes">
-      {foodList.map((val, key) => (
-        <Recipe
-        key={val.id}
-        title={val.name}
-        calories={val.calories}
-        image={val.imageURL}
-        ingredients={val.ingredients}
-        recipeURL={val.recipeURL}
-        />
-      )
-
-        )};
-      </div>
+      <Recipes/>
     </div>
   );
 }
