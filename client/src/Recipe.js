@@ -1,6 +1,6 @@
 import react from 'react';
 import style from './recipe.module.css';
-
+//filtering can be done here
 const Recipe = ({title,calories,image,ingredients, recipeURL}) => {
     return(
         <div className={style.recipe}>
