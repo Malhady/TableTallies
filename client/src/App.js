@@ -3,7 +3,8 @@ import Axios from "axios";
 import './App.css';
 import Recipe from './Components/Recipe';
 import Sidebar from './Components/Sidebar';
-import Recipes from './Components/Recipes'
+import Recipes from './Components/Recipes';
+import Navbar from './Components/Navbar';
 
 
 /*To run the application:
@@ -29,6 +30,7 @@ function App() {
       displays every single variable we call
       */
     }
+      <Navbar/>
       <Sidebar/>
       <Recipes/>
     </div>

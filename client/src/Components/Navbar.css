@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.Navbar {
+    position: sticky;
+    background-color: black;
+    width: 100%;
+    height: 120px;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+
+}
+
+/*logo image*/
+.Navbar .left {
+    flex: 50%; 
+    max-height: 100px;
+    padding-left: 250px;
+    align-content: center;
+    padding-top: 10px;
+}
+
+/*text links*/
+.Navbar .right {
+    flex: 50%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 80px;
+    align-items: center;
+}
+
+.Navbar .right .content {
+    max-height: 120px;
+
+}
+
+.Navbar .right .content a {
+    text-decoration: none;
+    color: #818181;
+    font-size: 30px;
+    margin-left: 35px;
+
+}
+
+.Navbar .right button{
+    display: none;
+}
+
+.Navbar .right #hide{
+    display: flex;
+}
+
+/*Reduces text size when window size is decreased*/
+@media only screen and (max-width: 1330px) {
+    .Navbar .right .content a {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (max-width: 1190px) {
+    .Navbar .right .content a {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .Navbar .right .content a {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 925px) {
+    .Navbar .right button {
+        display: flex;
+    }
+
+    .Navbar .right .content a {
+        display: none;
+    }
+
+    .Navbar .right #hide{
+        position: absolute;
+        left: 0px;
+        top: 120px;
+        width: 100%;
+        height: 180px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Navbar .right #hide a{
+        margin: 10px;
+        font-size: 20px;
+    }
+
+}
