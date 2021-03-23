@@ -3,6 +3,7 @@ import Axios from "axios";
 import './App.css';
 import Recipe from './Recipe';
 import Sidebar from './Components/Sidebar';
+import Navbar from './Components/Navbar';
 
 
 /*To run the application:
@@ -40,6 +41,7 @@ function App() {
       */
     }
       <Sidebar/>
+      <Navbar/>
       <div className = "recipes">
       {foodList.map((val, key) => (
         <Recipe
