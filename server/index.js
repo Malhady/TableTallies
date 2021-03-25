@@ -58,6 +58,8 @@ app.get("/read", async (req, res) => {
         res.send(result);
     });  
 });
+
+
 const PORT = process.env.REACT_APP_PORT_NUM;
 app.listen(PORT, () =>{
     console.log("Server is running on port 3001...")

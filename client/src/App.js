@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 import Axios from "axios";
 import './App.css';
-import Recipe from './Components/Recipe';
 import Sidebar from './Components/Sidebar';
 import Recipes from './Components/Recipes';
 import Navbar from './Components/Navbar';
+import RecipesVeg from './Components/DietFilters/Vegetarian/RecipesVeg';
+import RecipeCal500 from './Components/DietFilters/CalorieLess500/RecipesCal500';
+import history from './Components/history';
 
+import {Button} from 'react-bootstrap';
 
 /*To run the application:
   Open two terminals
@@ -25,14 +29,18 @@ function App() {
     //This is what shows up on the react client page
     
     <div className="App">
-    {/* 
-      This map runs through the entire foodlist we got from above and then
-      displays every single variable we call
-      */
-    }
+  
       <Navbar/>
       <Sidebar/>
-      <Recipes/>
+      
+
+      <BrowserRouter history ={history}>
+        <Switch>
+          <Route exact path ="/" component={Recipes}/>
+          <Route exact path ="/Dietfilters/vegetarian" component = {RecipesVeg}/>
+          <Route exact path ="/Dietfilters/cal500" component ={RecipeCal500}/>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
