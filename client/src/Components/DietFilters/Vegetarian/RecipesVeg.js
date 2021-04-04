@@ -1,12 +1,9 @@
-import react from 'react';
-import style from './recipe.module.css';
-import Recipe from './Recipe';
 import React, { Component } from "react";
 import axios from "axios";
-import DataTable from './DataTable';
-import {Button} from 'react-bootstrap';
+import DataTableVeg from './DataTableVeg';
 
-export default class Recipes extends Component{
+
+export default class RecipesVeg extends Component{
     constructor(props){
         super(props);
         this.state = { foodList: [] };
@@ -24,7 +21,7 @@ export default class Recipes extends Component{
 
      recipe(){
         return this.state.foodList.map((val, i) =>{
-            return <DataTable obj={val} key={i} />;
+            return <DataTableVeg obj={val} key={i} />;
         })
     }
 
