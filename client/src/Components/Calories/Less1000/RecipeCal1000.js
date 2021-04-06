@@ -1,7 +1,7 @@
 import style from '../../recipe.module.css';
 
-const RecipeVeg = ({title,calories,image,ingredients, recipeURL, healthLabels}) => {
-    if(healthLabels.includes("Vegetarian")){
+const RecipeCal1000 = ({title,calories,image,ingredients, recipeURL, healthLabels}) => {
+    if((calories > 0) && (calories < 1001)){
     return(
         <div className={style.recipe}>
             <h1>{title}</h1>
@@ -19,4 +19,4 @@ const RecipeVeg = ({title,calories,image,ingredients, recipeURL, healthLabels}) 
                 }
 }
 
-export default RecipeVeg;
+export default RecipeCal1000;
