@@ -94,6 +94,7 @@ class App extends Component {
             <Route exact path ="/dietfilters/vegan" component = {RecipesVegan}/>
             <Route exact path ="/dietfilters/sugar" component = {RecipesSugar}/>
 
+
             <Route exact path ="/allergies/peanut-free" component = {RecipePeanutFree}/>
             <Route exact path ="/allergies/dairy-free" component = {RecipeDairyFree}/>
             <Route exact path ="/allergies/egg-free" component = {RecipeEggFree}/>
@@ -101,11 +102,10 @@ class App extends Component {
             <Route exact path ="/allergies/shellfish-free" component = {RecipeShellFishFree}/>
             <Route exact path ="/allergies/pork-free" component = {RecipeporkFree}/>
 
-            
+
             <Route exact path ="/calories/less500" component ={RecipeCal500}/>
             <Route exact path ="/calories/less1000" component ={RecipeCal1000}/>
             <Route exact path ="/calories/less1500" component ={RecipeCal1500}/>
-
             <Route exact path ="/calories/greater2000" component ={RecipeCal2000}/>
             <Route exact path ="/calories/greater2500" component ={RecipeCal2500}/>
             <Route exact path ="/calories/greater3000" component ={RecipeCal3000}/>
