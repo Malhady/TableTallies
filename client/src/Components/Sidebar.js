@@ -1,42 +1,21 @@
-import React, { Component } from 'react';
-import history from './history';
-import {Button} from 'react-bootstrap';
+import { CheckBox } from "@material-ui/icons";
+import React, { Component } from "react";
 import './Sidebar.css';
+import Checkbox from './Filters/Checkbox';
+import FilterCheckBox from './Filters/FilterCheckBox';
 
 
+export default class Sidebar extends Component {
+    state = {checked: false};
 
-
-function btnClickCal500(){
-    history.push('/dietfilters/cal500');
-    window.location.reload();
-}
-function btnClickHome(){
-    history.push('/');
-    window.location.reload();
-}
-function btnClickVegetarian(){
-    history.push('/dietfilters/Vegetarian');
-    window.location.reload();
-}
-
-const Sidebar = () =>(
-    <div className="Sidebar">
-        <Button onClick={btnClickHome} className = "Sidebar_content" variant="contained" color="primary"> 
-            Home 
-        </Button>
-        <Button onClick={btnClickVegetarian} className = "Sidebar_content" variant="contained" color="primary"> 
-            Vegetarian
-        </Button>
-        <Button onClick={btnClickCal500} className = "Sidebar_content" variant="contained" color="primary"> 
-            Under 500 Calories
-        </Button>
-
-        <h1 className = "Sidebar_content">Filter</h1>
-        <h1 className = "Sidebar_content">Filter</h1>
-        <h1 className = "Sidebar_content">Filter</h1>
-
-    </div>
-);
-
-export default Sidebar;
-
+    handleCheckboxChange = event =>
+        this.setState({ checked: event.target.checked});
+  
+    render() {
+      return (
+        <div className = "Sidebar">
+            <FilterCheckBox className = "Sidebar_content"/>
+        </div>
+      );
+    }
+  }
