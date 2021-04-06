@@ -1,10 +1,6 @@
-import react from 'react';
-import style from './recipe.module.css';
-import Recipe from './Recipe';
 import React, { Component } from "react";
 import axios from "axios";
 import DataTable from './DataTable';
-import {Button} from 'react-bootstrap';
 
 export default class Recipes extends Component{
     constructor(props){

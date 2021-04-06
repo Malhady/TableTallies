@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import "./Navbar.css";
 import Logo from './ttlogo.PNG';
-import ReorderIcon from "@material-ui/icons/Reorder";
 
 function Navbar() {
 
