@@ -1,7 +1,7 @@
 import style from '../../recipe.module.css';
 
 const RecipeVeg = ({title,calories,image,ingredients, recipeURL, healthLabels}) => {
-    if(healthLabels.includes("Vegetarian")){
+    if(healthLabels.includes("Pescatarian")){
     return(
         <div className={style.recipe}>
             <h1>{title}</h1>

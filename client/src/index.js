@@ -6,5 +6,7 @@ require("dotenv").config();
 ReactDOM.render(
     <App />,
   
-  document.getElementById('root')
+  document.getElementById('root'),
+
+  document.querySelector("#container")
 );

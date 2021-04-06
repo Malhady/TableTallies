@@ -1,7 +1,6 @@
-import style from '../../recipe.module.css';
+import style from '../recipe.module.css';
 
-const RecipeCal500 = ({title,calories,image,ingredients, recipeURL, healthLabels}) => {
-    if((calories > 0) && (calories < 501)){
+const Recipe = ({title,calories,image,ingredients, recipeURL}) => {
     return(
         <div className={style.recipe}>
             <h1>{title}</h1>
@@ -14,9 +13,6 @@ const RecipeCal500 = ({title,calories,image,ingredients, recipeURL, healthLabels
             <a href = {recipeURL}><img src ={image} alt={title.text}/></a>        
         </div>
     );
-                }else{
-                    return "";
-                }
 }
 
-export default RecipeCal500;
+export default Recipe;
