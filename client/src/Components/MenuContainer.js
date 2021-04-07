@@ -8,7 +8,8 @@ class MenuContainer extends Component {
         super(props, context);
        
         this.state = {
-          visible: false
+          visible: false,
+          open: false
         };
         this.handleMouseDown = this.handleMouseDown.bind(this);
         this.toggleMenu = this.toggleMenu.bind(this);
@@ -23,14 +24,17 @@ class MenuContainer extends Component {
        
       toggleMenu() {
         this.setState({
-            visible: !this.state.visible
+            visible: !this.state.visible,
+            open: !this.state.open
         });
       }
 
     render() {
         return (
             <div>
-            <SidebarButton handleMouseDown={this.handleMouseDown}/>
+            <SidebarButton handleMouseDown={this.handleMouseDown}
+                open={this.state.open}
+                />
             <Sidebar handleMouseDown={this.handleMouseDown}
                 sidebarVisibility={this.state.visible}/>
             </div>

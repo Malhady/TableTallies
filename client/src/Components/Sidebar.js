@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dropdown, Button } from 'react-bootstrap';
+import { Dropdown, DropdownButton } from 'react-bootstrap';
 import './Sidebar.css';
 
 
@@ -13,20 +13,35 @@ class Sidebar extends Component {
             visibility = "show";
         }
         return (
-            <div id="flyoutMenu" className={visibility}
-            >
+            <div id="flyoutMenu" className={visibility}>
 
-                <Dropdown>
-                    <Dropdown.Toggle variant="success" id="dropdown-basic">
-                        Filters
-                    </Dropdown.Toggle>
+                    <DropdownButton id="dropdown-basic-button" title="Diets">                        
+                        <Dropdown.Item href="/dietfilters/vegetarian">Vegetarian</Dropdown.Item>
+                        <Dropdown.Item href="/dietfilters/pescatarian">Pescatarian</Dropdown.Item>
+                        <Dropdown.Item href="/dietfilters/low-potassium">Low-Potassium</Dropdown.Item>
+                        <Dropdown.Item href="/dietfilters/kosher">Kosher</Dropdown.Item>
+                        <Dropdown.Item href="/dietfilters/vegan">Vegan</Dropdown.Item>
+                        <Dropdown.Item href="/dietfilters/sugar">Low Sugar</Dropdown.Item>
+                    </DropdownButton>
+           
 
-                    <Dropdown.Menu>
-                        
-                        <Dropdown.Item href="/calories/less500">Under 500 Calories</Dropdown.Item>
-                        <Dropdown.Item href="/">Home</Dropdown.Item>
-                    </Dropdown.Menu>
-                </Dropdown>
+                    <DropdownButton id="dropdown-basic-button" title="Allergies">                        
+                        <Dropdown.Item href="/allergies/peanut-free">Peanut Allergy</Dropdown.Item>
+                        <Dropdown.Item href="/allergies/dairy-free">Diary Allergy</Dropdown.Item>
+                        <Dropdown.Item href="/allergies/egg-free">Egg Allergy</Dropdown.Item>
+                        <Dropdown.Item href="/allergies/soy-free">Soy Allergy</Dropdown.Item>
+                        <Dropdown.Item href="/allergies/shellfish-free">Shellfish Allergy</Dropdown.Item>
+                        <Dropdown.Item href="/allergies/pork-free">Pork Free</Dropdown.Item>
+                    </DropdownButton>
+
+                    <DropdownButton id="dropdown-basic-button" title="Calories">                        
+                        <Dropdown.Item href="/calories/less500">Less Than 500</Dropdown.Item>
+                        <Dropdown.Item href="/calories/less1000">Less Than 1000</Dropdown.Item>
+                        <Dropdown.Item href="/calories/less1500">Less Than 1500</Dropdown.Item>
+                        <Dropdown.Item href="/calories/greater2000">Greater Than 2000</Dropdown.Item>
+                        <Dropdown.Item href="/calories/greater2500">Greater Than 2500</Dropdown.Item>
+                        <Dropdown.Item href="/calories/greater3000">Greater Than 3000</Dropdown.Item>
+                    </DropdownButton>
 
             </div>
         );

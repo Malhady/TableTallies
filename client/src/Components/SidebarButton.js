@@ -3,9 +3,19 @@ import './SidebarButton.css';
  
 class SideBarButton extends Component {
   render() {
+    var open = "close";
+
+    if (this.props.buttonOpen) {
+      open = "open";
+    } 
+
     return (
+
       <button id="roundButton"
-              onMouseDown={this.props.handleMouseDown}></button>
+              onMouseDown={this.props.handleMouseDown}
+              className = {open}>
+              
+      </button>
     );
   }
 }

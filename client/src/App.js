@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter, Route, Switch} from "react-router-dom";
 import './App.css';
 import Sidebar from './Components/Sidebar';
 import Recipes from './Components/HomePage/Recipes';
@@ -51,7 +51,8 @@ class App extends Component {
     super(props, context);
    
     this.state = {
-      visible: false
+      visible: false,
+      open: false
     };
     this.handleMouseDown = this.handleMouseDown.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
@@ -66,7 +67,8 @@ class App extends Component {
    
   toggleMenu() {
     this.setState({
-        visible: !this.state.visible
+        visible: !this.state.visible,
+        open: !this.state.open
     });
   }
 
@@ -78,9 +80,14 @@ class App extends Component {
       <div className="App">
     
         <Navbar/>
-        <SidebarButton handleMouseDown={this.handleMouseDown}/>
-        <Sidebar handleMouseDown={this.handleMouseDown}
-          sidebarVisibility={this.state.visible}/>
+        <div className="sidebar">
+          <SidebarButton handleMouseDown={this.handleMouseDown}
+            buttonOpen={this.state.open}/>
+        </div>
+        <div className="sidebar">
+          <Sidebar handleMouseDown={this.handleMouseDown}
+            sidebarVisibility={this.state.visible}/>
+        </div>
 
         <BrowserRouter history ={history}>
           <Switch>

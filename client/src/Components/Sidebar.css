@@ -14,13 +14,24 @@
 .Sidebar_content{
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 10px;
     color: #818181;
     display: block;
+    padding-bottom: 100px;
+}
+
+#dropdown-basic-button{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 10px;
+  color: #818181;
+  display: block;
+  padding-bottom: 0px;
+  margin-bottom: 100px;
 }
 
 #flyoutMenu {
-    width: 15vw;
+    width: 10vw;
     height: 100vh;
     background-color: #FFE600;
     position: fixed;
@@ -39,4 +50,9 @@
   #flyoutMenu.show {
     transform: translate3d(0vw, 0, 0);
     overflow: hidden;
+  }
+
+  Dropdown{
+    float: left;
+    position: relative;
   }

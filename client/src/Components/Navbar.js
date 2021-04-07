@@ -17,7 +17,7 @@ function Navbar() {
         <div className="Navbar"> 
 
             <div className="left">
-                <img src= {Logo} width="200" />
+                <img src= {Logo} width="200" alt="" />
             </div>
 
             <div className="right">
