@@ -23,9 +23,10 @@ body {
     padding-left: 20px;
     align-content: center;
     padding-top: 6px;
+    padding-right: 50px;
 }
 
-/*text links*/
+/*links*/
 .Navbar .right {
     flex: 80%;
     display: flex;
@@ -36,71 +37,14 @@ body {
     
 }
 
-.Navbar button {
+.Navbar .right .openButton {
     background-color: gray;
-    color: rgb(19, 13, 13);
-    text-decoration: none;
     font-size: 23px;
-    margin-left: 120px;
-    padding: 4px;
-    width: 20%;
+    padding: 6px;
     border-radius: 5px;
     border: gray;
+    font-family: 'Lato', sans-serif;
+
 }
 
-.Navbar .right .modalBackground {
-    top: 0;
-    padding-top: 52%;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    color: grey;
-    align-content: left;
-    width: 60%;
-    
-    background: rgb(20, 19, 19);
-    display: flex;
-    border-radius: 5px;
-    border: black;
-    box-sizing: border-box;
-    height: 1250px;
-    
-}
 
-.modalInside {
-    width: 600px;
-    height: 650px;
-
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    color: grey;
-}
-
-.modalContent {
-    justify-content: space-between;
-    padding: 5px;
-}
-
-.modalContent .closeButton{
-    align-content: center;
-    font-size: 15px;
-}
-
-.buttonSetup {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    margin-left: 20%;
-}
-
-.modalContent p {
-    line-height: 175%;
-}
-
-.Navbar .right .modalShowing-true {
-    opacity: 1;
-    pointer-events: show;
-    
-}
