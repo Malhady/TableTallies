@@ -14,8 +14,15 @@ class Sidebar extends Component {
         }
         return (
             <div id="flyoutMenu" className={visibility}>
-
-                    <DropdownButton id="dropdown-basic-button" title="Diets">                        
+                <div>
+                    <DropdownButton
+                        key="down"
+                        id="dropdown-button-drop-down"
+                        drop="downs"
+                        variant="primary"
+                        title="Diets" 
+                        className="dropdownParent"
+                    >                        
                         <Dropdown.Item href="/dietfilters/vegetarian">Vegetarian</Dropdown.Item>
                         <br/>
                         <Dropdown.Item href="/dietfilters/pescatarian">Pescatarian</Dropdown.Item>
@@ -28,9 +35,16 @@ class Sidebar extends Component {
                         <br/>
                         <Dropdown.Item href="/dietfilters/sugar">Low Sugar</Dropdown.Item>
                     </DropdownButton>
-           
+                </div>
 
-                    <DropdownButton id="dropdown-basic-button" title="Allergies">                        
+                    <DropdownButton 
+                        key="down"
+                        id="dropdown-button-drop-down"
+                        drop="downs"
+                        variant="primary"
+                        title="Allergies" 
+                        className="dropdownParent"
+                    >                        
                         <Dropdown.Item href="/allergies/peanut-free">Peanut Allergy</Dropdown.Item>
                         <br/>
                         <Dropdown.Item href="/allergies/dairy-free">Diary Allergy</Dropdown.Item><br/>
@@ -40,8 +54,14 @@ class Sidebar extends Component {
                         <Dropdown.Item href="/allergies/pork-free">Pork Free</Dropdown.Item>
                     </DropdownButton>
 
-                    <DropdownButton id="dropdown-basic-button" title="Calories">                        
-                        <Dropdown.Item href="/calories/less500">Less Than 500</Dropdown.Item><br/>
+                    <DropdownButton 
+                        key="down"
+                        id="dropdown-button-drop-down"
+                        drop="downs"
+                        variant="primary"
+                        title="Calories" 
+                        className="dropdownParent"
+                    >                            <Dropdown.Item href="/calories/less500">Less Than 500</Dropdown.Item><br/>
                         <Dropdown.Item href="/calories/less1000">Less Than 1000</Dropdown.Item><br/>
                         <Dropdown.Item href="/calories/less1500">Less Than 1500</Dropdown.Item><br/>
                         <Dropdown.Item href="/calories/greater2000">Greater Than 2000</Dropdown.Item><br/>
