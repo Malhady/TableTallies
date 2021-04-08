@@ -1,9 +1,9 @@
 #roundButton {
-    background-color: #96D9FF;
+    background-color: #FFFB7D;
     margin-bottom: 20px;
     width: 5vw;
     height: 5vh;
-    border: 10px solid #0065A6;
+    border: 10px solid #df9716;
     outline: none;
     transition: all .2s cubic-bezier(0, 1.26, .8, 1.28);
     padding-left: 20px;
@@ -22,9 +22,9 @@
   }
 
   #roundButton:hover {
-    background-color: #96D9FF;
+    background-color: #FFFB7D;
     cursor: pointer;
-    border-color: #003557;
+    border-color: #cb8302;
     /*transform: scale(1.2, 1.2);*/
   }
    
