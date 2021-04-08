@@ -58,5 +58,24 @@
     font-size: 100%;
     color: lime;
     display: block;
-    margin-bottom: 130px;
+    margin-bottom: 170px;
   }
+
+.buttonSize{
+    font-size:20px;
+  }
+
+.button {
+    font: bold 16px Arial;
+}
+
+.brsmall {
+  display: block;
+  margin-bottom: 0.3em;
+}
+
+
+.brmed {
+  display: block;
+  margin-bottom: 1em;
+}
