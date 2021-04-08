@@ -17,7 +17,7 @@ function Navbar() {
         <div className="Navbar"> 
 
             <div className="left">
-                <img src= {Logo} width="200" alt="" />
+                <img src= {Logo} width="130" alt="" />
             </div>
 
             <div className="right">
@@ -25,6 +25,7 @@ function Navbar() {
                 <div className={`modalBackground modalShowing-${modalState}`}>
                     <div className="modalInside">
                         <div className="modalContent">
+
                             <h2>Table Tallies</h2>
                             <p>The purpose of this web application is to provide users with the opportunity to improve their diet plan. 
                                 Table Tallies aims to assist users with efficiently acquiring the dietary information that they need, regardless of knowledge level on this subject. 
@@ -37,12 +38,20 @@ function Navbar() {
                             <p>By providing an application that is easy to use and quickly provides users with meals that will fit into their diet plans, 
                                 Table Tallies can give more people the opportunity to transition to a healthier lifestyle.
                             </p>
-
+                            <p>
+                                Visit cdc.gov/nutrition/data-statistics for more nutritional information and statistics.
+                            </p>
+                            <br>
+                            </br>
+                            <div className= "buttonSetup">
+                            <button className="closeButton" onClick={() => manageState()}>
+                                Close
+                            </button>
+                            </div>
 
                         </div>
                     </div>
                 </div>
-
 
                  <button onClick={() => manageState()}>About Table Tallies</button>
 
