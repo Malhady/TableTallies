@@ -1,0 +1,34 @@
+#roundButton {
+    background-color: #96D9FF;
+    margin-bottom: 20px;
+    width: 5vw;
+    height: 5vh;
+    border: 10px solid #0065A6;
+    outline: none;
+    transition: all .2s cubic-bezier(0, 1.26, .8, 1.28);
+    padding-left: 20px;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+
+  }
+   
+
+  #roundButton.open{
+    transform: translate3d(10vw, 0, 0);
+    overflow: hidden;
+  }
+  #roundButton.close{
+    transform: translate3d(0vw, 0, 0);
+  }
+
+  #roundButton:hover {
+    background-color: #96D9FF;
+    cursor: pointer;
+    border-color: #003557;
+    /*transform: scale(1.2, 1.2);*/
+  }
+   
+  #roundButton:active {
+    border-color: #003557;
+    background-color: #FFF;
+  }

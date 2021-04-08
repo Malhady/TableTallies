@@ -1,42 +1,51 @@
 import React, { Component } from 'react';
-import history from './history';
-import {Button} from 'react-bootstrap';
+import { Dropdown, DropdownButton } from 'react-bootstrap';
 import './Sidebar.css';
 
 
+class Sidebar extends Component {
 
 
-function btnClickCal500(){
-    history.push('/dietfilters/cal500');
-    window.location.reload();
+    render() {
+        var visibility = "hide";
+
+        if (this.props.sidebarVisibility) {
+            visibility = "show";
+        }
+        return (
+            <div id="flyoutMenu" className={visibility}>
+
+                    <DropdownButton id="dropdown-basic-button" title="Diets">                        
+                        <Dropdown.Item href="/dietfilters/vegetarian">Vegetarian</Dropdown.Item>
+                        <Dropdown.Item href="/dietfilters/pescatarian">Pescatarian</Dropdown.Item>
+                        <Dropdown.Item href="/dietfilters/low-potassium">Low-Potassium</Dropdown.Item>
+                        <Dropdown.Item href="/dietfilters/kosher">Kosher</Dropdown.Item>
+                        <Dropdown.Item href="/dietfilters/vegan">Vegan</Dropdown.Item>
+                        <Dropdown.Item href="/dietfilters/sugar">Low Sugar</Dropdown.Item>
+                    </DropdownButton>
+           
+
+                    <DropdownButton id="dropdown-basic-button" title="Allergies">                        
+                        <Dropdown.Item href="/allergies/peanut-free">Peanut Allergy</Dropdown.Item>
+                        <Dropdown.Item href="/allergies/dairy-free">Diary Allergy</Dropdown.Item>
+                        <Dropdown.Item href="/allergies/egg-free">Egg Allergy</Dropdown.Item>
+                        <Dropdown.Item href="/allergies/soy-free">Soy Allergy</Dropdown.Item>
+                        <Dropdown.Item href="/allergies/shellfish-free">Shellfish Allergy</Dropdown.Item>
+                        <Dropdown.Item href="/allergies/pork-free">Pork Free</Dropdown.Item>
+                    </DropdownButton>
+
+                    <DropdownButton id="dropdown-basic-button" title="Calories">                        
+                        <Dropdown.Item href="/calories/less500">Less Than 500</Dropdown.Item>
+                        <Dropdown.Item href="/calories/less1000">Less Than 1000</Dropdown.Item>
+                        <Dropdown.Item href="/calories/less1500">Less Than 1500</Dropdown.Item>
+                        <Dropdown.Item href="/calories/greater2000">Greater Than 2000</Dropdown.Item>
+                        <Dropdown.Item href="/calories/greater2500">Greater Than 2500</Dropdown.Item>
+                        <Dropdown.Item href="/calories/greater3000">Greater Than 3000</Dropdown.Item>
+                    </DropdownButton>
+
+            </div>
+        );
+    }
 }
-function btnClickHome(){
-    history.push('/');
-    window.location.reload();
-}
-function btnClickVegetarian(){
-    history.push('/dietfilters/Vegetarian');
-    window.location.reload();
-}
-
-const Sidebar = () =>(
-    <div className="Sidebar">
-        <Button onClick={btnClickHome} className = "Sidebar_content" variant="contained" color="primary"> 
-            Home 
-        </Button>
-        <Button onClick={btnClickVegetarian} className = "Sidebar_content" variant="contained" color="primary"> 
-            Vegetarian
-        </Button>
-        <Button onClick={btnClickCal500} className = "Sidebar_content" variant="contained" color="primary"> 
-            Under 500 Calories
-        </Button>
-
-        <h1 className = "Sidebar_content">Filter</h1>
-        <h1 className = "Sidebar_content">Filter</h1>
-        <h1 className = "Sidebar_content">Filter</h1>
-
-    </div>
-);
-
 export default Sidebar;
 
