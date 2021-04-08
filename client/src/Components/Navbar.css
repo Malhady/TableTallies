@@ -19,10 +19,10 @@ body {
 /*logo image*/
 .Navbar .left {
     flex: 50%; 
-    max-height: 100px;
+    height: 50px;
     padding-left: 20px;
     align-content: center;
-    padding-top: 10px;
+    padding-top: 0px;
 }
 
 /*text links*/
