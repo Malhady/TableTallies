@@ -1,8 +1,8 @@
 #roundButton {
     background-color: #FFFB7D;
     margin-bottom: 20px;
-    width: 3vw;
-    height: 5vh;
+    width: 2.3vw;
+    height: 10vh;
     border: 10px solid #df9716;
     outline: none;
     transition: all .2s cubic-bezier(0, 1.26, .8, 1.28);
@@ -10,7 +10,7 @@
     overflow-x: hidden; /* Disable horizontal scroll */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     align-items: center;
-
+    top: 50%;
 
   }
    
