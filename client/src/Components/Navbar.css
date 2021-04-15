@@ -13,7 +13,6 @@ body {
     font-family: 'Lato', sans-serif;
     display: flex;
 
-
 }
 
 /*logo image*/
@@ -38,13 +37,25 @@ body {
 }
 
 .Navbar .right .openButton {
-    background-color: gray;
-    font-size: 23px;
-    padding: 6px;
+    background-color: rgb(19, 15, 15);
+    color: gray;
+    font-size: 20px;
+    padding: 4px;
     border-radius: 5px;
-    border: gray;
+    border: black;
     font-family: 'Lato', sans-serif;
+    margin-left: 25px;
+    text-decoration: none;
 
 }
+
+.Navbar .right .calorie-table {
+    position: fixed;
+    width: 43%;
+    background-color:gray;
+    color: black;
+    
+}
+
 
 

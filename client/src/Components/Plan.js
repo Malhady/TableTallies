@@ -1,12 +1,13 @@
 import React from 'react'
+import './Plan.css'
 import './About.css'
 
 
-function Popup(props) {
+function Plan(props) {
     return (props.trigger) ? (
 
-    <div className="about">
-        <div className="about-inside">
+    <div className="plan">
+        <div className="plan-inside">
             <button className="close-button" onClick={() => props.setTrigger(false)}
                 >X</button>
             {props.children}
@@ -18,4 +19,5 @@ function Popup(props) {
 
 }
 
-export default Popup;
+export default Plan;
+
