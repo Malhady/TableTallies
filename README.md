@@ -20,10 +20,12 @@ Table Tallies relies on environment variables that store the port numbers and da
 2. Add the following variables and their values.  
 
 
-
     REACT_APP_PORT_NUM= SERVER_PORT_NUMBER
+    
     REACT_APP_DB_USERNAME=DATABASE_USER_USERNAME
+    
     REACT_APP_DB_PASSWORD=DATABASE_USER_PASSWORD
+    
     REACT_APP_DB_NAME=DATABASE_NAME
 
 The port number would be something like '3001'. The database username, password, and name would be found from your MongoDB database.
